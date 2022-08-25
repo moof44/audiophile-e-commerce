@@ -1,3 +1,6 @@
+// Color identification / definition...
+// This is angular material pallete specific, not color variable
+// see global-variable.scss
 @use "@angular/material" as mat;
 $accent: mat.define-palette(mat.$orange-palette, A400);
 $primary: mat.define-palette(mat.$blue-palette, 900);
