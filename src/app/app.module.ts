@@ -7,20 +7,18 @@ import { HeaderComponent } from './features/layout/header/header.component';
 import { FooterComponent } from './features/layout/footer/footer.component';
 import { HomeComponent } from './features/pages/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// Material
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    HomeComponent
-  ],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, HomeComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatButtonModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
