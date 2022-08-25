@@ -2,8 +2,15 @@
 // Already changed in angular.json
 @use "color" as col;
 @use "@angular/material" as mat;
+@use "global-variable.scss" as var;
 
-@include mat.core();
+// This is how we changed the font for the whole application
+// Define the config changes - this time only $font-family
+$custom-typography: mat.define-typography-config(
+  $font-family: var.$default-font,
+);
+// Then include it here in mat.core($custom-typography)
+@include mat.core($custom-typography);
 
 $audiophile-e-commerce-theme: mat.define-light-theme(
   (
@@ -16,3 +23,11 @@ $audiophile-e-commerce-theme: mat.define-light-theme(
 );
 
 @include mat.all-component-themes($audiophile-e-commerce-theme);
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+}
