@@ -1,0 +1,18 @@
+// This replaces style.scss
+// Already changed in angular.json
+@use "color" as col;
+@use "@angular/material" as mat;
+
+@include mat.core();
+
+$audiophile-e-commerce-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: col.$primary,
+      accent: col.$accent,
+      warn: col.$warn,
+    ),
+  )
+);
+
+@include mat.all-component-themes($audiophile-e-commerce-theme);

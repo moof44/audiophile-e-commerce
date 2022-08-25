@@ -1,0 +1,7 @@
+// This is where global variables will be defined
+@use "color" as col;
+@import "~@angular/material/theming";
+
+$primary: mat-color(col.$primary);
+$accent: mat-color(col.$accent);
+$warn: mat-color(col.$warn);

@@ -1,6 +1,7 @@
-// This is just to see the color of header... not yet final
+// This is the global variable css that we will use
+@use "../../../../assets/theme/global-variable.scss" as var;
 .header-container {
-  background-color: #000000;
+  background-color: var.$primary;
   color: white;
 
   h2 {
