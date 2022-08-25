@@ -1,0 +1,48 @@
+// This will be used for buttons as define in figma
+@use "global-variable.scss" as var;
+
+// Generic for all buttons
+$height: 48px;
+$font-size: 13px;
+$width: 160px;
+
+@mixin button-common() {
+  height: $height;
+  font-size: $font-size;
+  width: $width;
+}
+
+@mixin default-button() {
+  @include button-common();
+  background-color: var.$accent;
+  color: white;
+  border: 0px;
+}
+
+@mixin button2() {
+  @include button-common();
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 0px;
+}
+
+@mixin button3() {
+  @include button-common();
+  color: darkgrey;
+  border: 0px;
+  background-color: white;
+}
+
+@mixin default-button-hover() {
+  background-color: #fbaf85;
+}
+
+@mixin button2-hover() {
+  background-color: black;
+  color: white;
+}
+
+@mixin button3-hover() {
+  color: #fbaf85;
+}

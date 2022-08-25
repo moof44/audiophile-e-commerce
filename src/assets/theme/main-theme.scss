@@ -3,6 +3,7 @@
 @use "color" as col;
 @use "@angular/material" as mat;
 @use "global-variable.scss" as var;
+@use "global-buttons.scss" as b;
 
 // This is how we changed the font for the whole application
 // Define the config changes - this time only $font-family
@@ -30,4 +31,30 @@ body {
 }
 body {
   margin: 0;
+}
+
+/*Global Class Definition*/
+// Button
+.default-button {
+  @include b.default-button;
+}
+
+.default-button:hover {
+  @include b.default-button-hover;
+}
+
+.button2 {
+  @include b.button2;
+}
+
+.button2:hover {
+  @include b.button2-hover;
+}
+
+.button3 {
+  @include b.button3;
+}
+
+.button3:hover {
+  @include b.button3-hover;
 }
